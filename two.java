@@ -13,7 +13,19 @@ public class two {
         */
 
         public static void main(String[] args){
-
+                int previousFibNum = 1;
+                int currentFibNum = 2;
+                int temp;
+                int fibSum = 3;
+                while (currentFibNum < 4000000){
+                        if (currentFibNum % 2 == 0){
+                                fibSum += currentFibNum;
+                        }
+                        temp = currentFibNum;
+                        currentFibNum = currentFibNum + previousFibNum;
+                        previousFibNum = temp;
+                }
+                System.out.printf("The sum is %d\n", fibSum);
         }
         
 }
